@@ -41,18 +41,19 @@ public class LoginServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(
 				request, response);
+		System.out.println("coming here");
 	}
 
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
+		System.out.println("coming here2");
 
 		boolean isUserValid = userValidationService.isUserValid(name, password);
 
 		if (isUserValid) {
 			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/list-todos.do");
+			response.sendRedirect("list-todos.do");
 		} else {
 			request.setAttribute("errorMessage", "Invalid Credentials!");
 			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(

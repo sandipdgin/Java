@@ -4,12 +4,12 @@
 
 	<ul class="nav navbar-nav">
 		<li class="active"><a href="#">Home</a></li>
-		<li><a href="/list-todos.do">Todos</a></li>
-		<li><a href="#">First Web App</a></li>
+		<li><a href="list-todos.do">Todos</a></li>
+		<li><a href="javascript:void(0);">First Web App</a></li>
 	</ul>
 
 	<ul class="nav navbar-nav navbar-right">
-		<li><a href="/logout.do">Logout</a></li>
+		<li><a href="logout.do">Logout</a></li>
 	</ul>
 
 </nav>

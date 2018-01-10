@@ -18,7 +18,7 @@
 					<td>${todo.name}</td>
 					<td>${todo.category}</td>
 					<td>&nbsp;&nbsp;<a class="btn btn-danger"
-						href="/delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
+						href="delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -27,7 +27,7 @@
 	<p>
 		<font color="red">${errorMessage}</font>
 	</p>
-	<a class="btn btn-success" href="/add-todo.do">Add New Todo</a>
+	<a class="btn btn-success" href="add-todo.do">Add New Todo</a>
 </div>
 
 <%@ include file="../common/footer.jspf"%>
